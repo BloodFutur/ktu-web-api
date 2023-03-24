@@ -20,5 +20,4 @@ COPY . /usr/src/app
 EXPOSE ${PORT}
 
 # We run the app
-# RUN npm run start
 CMD ["npm", "run", "start"]

@@ -46,7 +46,7 @@ router.get('/students', async (req, res) => {
  *         name: id
  *         schema:
  *           type: string    
- *         required: true
+ *         required: true+
  *         description: The student id
  *     responses:
  *       200:
@@ -169,8 +169,6 @@ router.patch('/students/:id', async (req, res) => {
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
-
-
 });
 
 // Delete one student
@@ -202,8 +200,6 @@ router.delete('/students/:id', async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 });
-
-
 
 
 module.exports = router;

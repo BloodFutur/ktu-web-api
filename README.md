@@ -12,6 +12,14 @@ This is a simple Web API made with Node.js and Express. Its purpose is to show h
 
 ## How to run
 
+### With script
+
+1. Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
+2. Install [Docker-compose](https://docs.docker.com/compose/install/).
+3. Clone this repository.
+4. Run `./build-and-run.sh` in the root directory of the project.
+5. Enjoy!
+
 ### With Docker
 
 1. Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
