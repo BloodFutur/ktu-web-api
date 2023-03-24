@@ -1,16 +1,16 @@
 // Import dependencies
-require('dotenv').config();
+require('dotenv').config(); // Load environment variables
 
-const express = require('express');
+const express = require('express'); // Web framework
 const mongoose = require('mongoose'); // No-SQL Database
-const routes = require('./routes/students');
+const routes = require('./routes/students'); // Import routes
 
-const morgan = require('morgan');
+const morgan = require('morgan'); // Log requests
 
-const bodyParser = require('body-parser');
-const swaggerUi = require('swagger-ui-express');
-const swaggerJsdoc = require('swagger-jsdoc');
-const swaggerDocument = require('./swagger.json');
+const bodyParser = require('body-parser'); // Parse request body
+const swaggerUi = require('swagger-ui-express'); // Swagger UI
+const swaggerJsdoc = require('swagger-jsdoc'); // Swagger JSDoc
+const swaggerDocument = require('./swagger.json'); // Swagger JSON
 
 
 // Create express app
@@ -47,6 +47,7 @@ app.use('/api', routes); // Use routes
 
 
 
+// Swagger
 const options = {
     definition: {
         openapi: '3.0.0',
