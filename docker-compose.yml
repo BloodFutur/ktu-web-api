@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web-api:
+    container_name: web-api
+    image: web-api
+    restart: always
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      - MONGO_STRING=${MONGODOCKER_STRING}
+    links:
+      - mongo
+    command: bash -c "npm run seed && npm run start"
+    networks:
+      - app-network
+  
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - '27018:27017'
+    volumes:
+      - ./data:/data/db
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
